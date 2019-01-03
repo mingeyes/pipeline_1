@@ -12,7 +12,7 @@ pipeline {
             steps {    
                 cleanWs()
                 echo " This is pipeline_1 "
-                echo "project_name=${PROJECT_NAME} activate=${APPLICATION_ACTIVE} home_dir=${HOME_DIR} "
+                echo "project_name=${env.PROJECT_NAME} activate=${env.APPLICATION_ACTIVE} home_dir=${env.HOME_DIR} "
             }
         }
         stage('Build') {
